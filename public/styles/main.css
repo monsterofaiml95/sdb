@@ -1,0 +1,36 @@
+body{
+    background: rgb(217, 220, 235);
+     
+}
+div{
+    
+    padding-top: 25%;
+    padding: 25%;
+    
+
+}
+.inner{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: antiquewhite;
+    align-items: center;
+    border: dashed greenyellow;
+    
+    
+    
+}
+.btn{
+    background: rgb(64, 248, 141);
+    width: 170px;
+    border: 0;
+    border-radius: 2.5%;
+    margin-top: 20%;
+}
+input{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background: antiquewhite;
+    margin-top: 25%;
+}
