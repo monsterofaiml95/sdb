@@ -18,8 +18,9 @@
 
         <% if(locals.name){ %>
         <p>Name :<%= name.Name %></p>
-        <p>RollNo:<%=name.RollNo  %></p>
+        <p>RollNo:<%=name._id  %></p>
         <p>Status:<%=name.Status %></p>
+        <p>Branch:<%=name.Branch %></p>
         <p>Father Name:<%=name.FatherName %></p>
     <% }else{ %>
         <p>Data Not Found</p>
