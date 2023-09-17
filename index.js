@@ -14,9 +14,10 @@ mongoose
 // });
 const studentNameSchema= new mongoose.Schema({
     Name:String,
-    RollNo:Number,
+    _id:Number,
     Status:String,
-    FatherName:String
+    FatherName:String,
+    Branch:String
 });
 const Student = new mongoose.model("Student",studentNameSchema);
 
@@ -28,7 +29,7 @@ app.use(express.static("public"));
 app.get("/", (req, res) => {
         const rollno = req.body.input;
     
-const student =  Student.findOne({ RollNo: rollno }).select("Name RollNo Status FatherName");
+const student =  Student.findOne({ _id: rollno }).select("Name _id Status FatherName Branch");
     res.render("index.ejs",{name:student});
     });
  
@@ -37,7 +38,7 @@ const student =  Student.findOne({ RollNo: rollno }).select("Name RollNo Status 
         console.log(rollno);
        
         try {
-             const student = await Student.findOne({ RollNo: rollno }).select("Name RollNo Status FatherName");
+             const student = await Student.findOne({ _id: rollno }).select("Name _id Status FatherName Branch");
             console.log(student);
             res.render("index.ejs", { name: student });
         } catch (err) {
