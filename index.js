@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-
+const student =  Student.findOne({ RollNo: rollno }).select("Name RollNo Status FatherName");
     res.render("index.ejs",{name:student});
     });
  
